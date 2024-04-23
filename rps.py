@@ -2,8 +2,8 @@ import random
 
 def rps(player):
     bot = random.randrange(1,4)
-    if player in [1, 2, 3]:
-        if(player == 1):
+    if player in ['1', '2', '3']:
+        if(player == '1'):
             print("Player selected Rock")
             if(bot == 1):
                 print("Bot selected Rock")
@@ -14,7 +14,7 @@ def rps(player):
             elif(bot == 3):
                 print("Bot selected Scissors")
                 return "win"
-        elif(player == 2):
+        elif(player == '2'):
             print("Player selected Paper")
             if(bot == 1):
                 print("Bot selected Rock")
@@ -25,7 +25,7 @@ def rps(player):
             elif(bot == 3):
                 print("Bot selected Scissors")
                 return "lose"
-        elif(player == 3):
+        elif(player == '3'):
             print("Player selected Scissors")
             if(bot == 1):
                 print("Bot selected Rock")
@@ -43,7 +43,7 @@ playerscore = 0
 botscore = 0
 
 while((playerscore !=5) and (botscore != 5)):
-    playerrps = int(input("Enter weapon: (1-Rock 2-Paper 3-Scissors) "))
+    playerrps = input("Enter weapon: (1-Rock 2-Paper 3-Scissors) ")
     x = rps(playerrps)
     if(x == "error"):
         print("unknown command")
